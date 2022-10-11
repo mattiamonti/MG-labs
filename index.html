@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MG Labs</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+
+                colors: {
+                    transparent: 'transparent',
+                    'white': '#f5f5f5',
+                    'black': '#121212',
+                    'yellow': '#FFBD44',
+                    'dark-yellow': '#F6AA1D',
+                },
+
+                fontFamily: {
+                    'sans': ['Helvetica'],
+                    'serif': ['Georgia'],
+                    'mono': ['ui-monospace', 'SFMono-Regular'],
+                    'display': ['Oswald'],
+                    'body': ['"Open Sans"'],
+                },
+                fontSize: {
+                    'title': '5rem',
+                    'subtitle': '4rem',
+                    'title-card': '3.5rem',
+                    'normal': '1.5rem',
+                    'menu': '1.25rem',
+                },
+
+                extends: {
+
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="ml-16 mr-16 text-sans bg-white">
+
+    <div id="header" class="w-auto h-16 mt-4 flex justify-between font-bold text-black">
+        <div id="logo" class="my-auto">
+            <img src="./img/MGlogo.svg" alt="logo" class="w-12 h-12 inline-block">
+            <h2 class="inline-block text-menu ml-4">MG labs</h2>
+        </div>
+
+        <div id="navbar" class="w-1/5 flex justify-between my-auto">
+            <p class="inline-block text-menu hover:scale-105 hover:duration-150"><a href="">PROGETTI</a></p>
+            <p class="inline-block text-dark-yellow text-menu hover:scale-110 hover:duration-150"><a
+                    href="">CONTATTACI</a>
+            </p>
+        </div>
+    </div>
+
+    <div id="maincontent" class="flex justify-between text-black">
+        <div id="maintext" class="w-1/2 h-auto mt-28">
+            <h1 class="text-title font-bold" id="title">Ciao! <span id="emoji">👋🏻</span></h1>
+            <p class="text-normal" id="content">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
+                Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
+                Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+            </p>
+
+            <div class="mt-20 flex" id="buttons">
+                <button class="p-1 px-2 bg-yellow text-normal font-bold rounded-lg inline-block hover:scale-110 hover:duration-150">
+                    Contattaci
+                </button>
+
+                <a href="https://github.com/Gnooodles" target="_blank" class="hover:scale-110 hover:duration-150">
+                    <div class="ml-16 my-auto">
+                        <img src="./img/github.svg" alt="Github Logo" class="inline-block w-12 h-12">
+                        <p class="inline-block text-menu font-bold ml-1">Daniele</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/mattiamonti" target="_blank" class="hover:scale-110 hover:duration-150">
+                    <div class="ml-8 my-auto">
+                        <img src="./img/github.svg" alt="Github Logo" class="inline-block w-12 h-12">
+                        <p class="inline-block text-menu font-bold ml-1">Mattia</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div id="illustrationwrapper" class="w-1/2 h-auto mt-28">
+            <img src="./img/wallpaper.svg" alt="team" class="w-full scale-110 ml-8" id="illustration">
+        </div>
+    </div>
+
+    <script>
+        gsap.from("#header", {y:-100, duration: 1})
+        gsap.from("#title", {x:-500, opacity: 0, duration: 1})
+        gsap.from("#content", {x:-500, opacity: 0, duration: 1, delay: 0.5})
+        gsap.from("#illustration", {x: 1000, opacity: 0, duration: 1, delay: 0.2})
+        gsap.from("#buttons", {y:100, opacity:0 , duration: 1, delay: 1})
+
+    </script>
+</body>
+
+</html>
