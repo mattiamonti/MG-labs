@@ -35,8 +35,44 @@
                     'menu': '1.25rem',
                 },
 
-                extends: {
-
+                extend: {
+                    animation: {
+                        wave: 'wave 3s infinite',
+                    },
+                    keyframes: {
+                        wave: {
+                            '0%': {
+                                transform: 'rotate(0deg)',
+                            },
+                            '10%': {
+                                transform: 'rotate(14deg)',
+                            },
+                            '20%': {
+                                transform: 'rotate(-8deg)',
+                            },
+                            '30%': {
+                                transform: 'rotate(14deg)',
+                            },
+                            '40%': {
+                                transform: 'rotate(-4.0deg)',
+                            },
+                            '50%': {
+                                transform: 'rotate(10deg)',
+                            },
+                            '60%': {
+                                transform: 'rotate(-8deg)',
+                            },
+                            '70%': {
+                                transform: 'rotate(14deg)',
+                            },
+                            '80%': {
+                                transform: 'rotate(0deg)',
+                            },
+                            '100%': {
+                                transform: 'rotate(0deg)',
+                            },
+                        },
+                    },
                 }
             }
         }
@@ -61,7 +97,7 @@
 
     <div id="maincontent" class="flex justify-between text-black">
         <div id="maintext" class="w-1/2 h-auto mt-28">
-            <h1 class="text-title font-bold" id="title">Ciao! <span id="emoji">👋🏻</span></h1>
+            <h1 class="text-title font-bold" id="title">Ciao! <span id="emoji" class="inline-block animate-wave">👋🏻</span></h1>
             <p class="text-normal" id="content">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                 Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
                 Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
