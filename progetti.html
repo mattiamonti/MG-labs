@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progetti</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+        integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+
+                colors: {
+                    transparent: 'transparent',
+                    'white': '#f5f5f5',
+                    'black': '#121212',
+                    'yellow': '#FFBD44',
+                    'dark-yellow': '#F6AA1D',
+                    'gray': '#B6B6B6',
+                },
+
+                fontFamily: {
+                    'sans': ['Helvetica'],
+                    'serif': ['Georgia'],
+                    'mono': ['ui-monospace', 'SFMono-Regular'],
+                    'display': ['Oswald'],
+                    'body': ['"Open Sans"'],
+                },
+                fontSize: {
+                    'title': '5rem',
+                    'subtitle': '4rem',
+                    'title-card': '3.5rem',
+                    'normal': '1.5rem',
+                    'menu': '1.25rem',
+                    'copyrights': '0.75rem',
+                },
+                extend:{
+                    blur:{
+                        xs: '3px',
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+
+<body class="ml-16 mr-16 text-sans bg-white max-w-full overflow-x-hidden overflow-hidden max-h-full">
+
+    <div id="background" class="absolute -z-10 scale-150 top-36 left-1/2 -translate-x-1/2 blur-xs">
+        <img src="./img/wallpaper.svg" alt="">
+    </div>
+
+    <div id="header" class="w-auto h-16 mt-4 flex justify-between font-bold text-black">
+        <div id="logo" class="my-auto">
+            <img src="./img/MGlogo.svg" alt="logo" class="w-12 h-12 inline-block">
+            <h2 class="inline-block text-menu ml-4">MG labs</h2>
+        </div>
+
+        <div id="navbar" class="w-1/5 flex justify-between my-auto">
+            <p class="inline-block text-menu hover:scale-105 hover:duration-150"><a href="">PROGETTI</a></p>
+            <p class="inline-block text-dark-yellow text-menu hover:scale-110 hover:duration-150"><a
+                    href="">CONTATTACI</a>
+            </p>
+        </div>
+    </div>
+
+
+    <div id="maintext" class="w-1/2 h-auto mt-28 m-auto">
+        <p class="text-normal" id="content">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
+            Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
+            Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+        </p>
+    </div>
+
+</body>
+
+
+</html>
