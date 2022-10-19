@@ -115,7 +115,7 @@
                         class="px-2 rounded-md bg-white w-full h-2/3"></textarea>
                 </label>
 
-                <input type="submit" value="Invia"
+                <input type="submit" value="Invia" onclick="showHide(); return false;"
                     class="w-1/4 bg-yellow text-black p-1 font-bold text-menu rounded-xl mt-16 hover:scale-110 hover:duration-150">
 
             </form>
@@ -136,7 +136,15 @@
 
 
     <script>
-
+        function showHide() {
+            var div = document.getElementById('illustrationwrapper');
+            if (div.style.display == 'none') {
+                div.style.display = '';
+            }
+            else {
+                div.style.display = 'none';
+            }
+        }
 
     </script>
 
