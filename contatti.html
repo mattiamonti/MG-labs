@@ -97,15 +97,15 @@
         </div>
     </div>
 
-    <div id="maincontent" class="flex justify-between text-black w-full h-3/4 mt-8">
-        <div id="form" class="w-2/3 h-full absolute -z-20">
-            <img src="./img/form.svg" alt="Form" class="-z-10 ">
+    <div id="maincontent" class="flex justify-between text-black w-full h-auto mt-8">
+        <div id="form" class="w-2/3 h-auto absolute -z-20">
+            <img src="./img/form.svg" alt="Form" class="-z-10 w-5/6 h-auto">
             <!--absolute -mt-8-->
         </div>
 
         <div class="w-2/3 h-auto mt-16 pl-8">
             <form action="mailto:mattiamonti2001@gmail.com,danielegnudi99@gmail.com" method="GET"
-                class="w-1/2 text-black" enctype="text/plain">
+                class="w-2/3 text-black" enctype="text/plain">
                 <label class="text-menu">Il tuo nome<br><input type="text" name="subject" placeholder="Mario Rossi"
                         class="w-full h-9 rounded-md bg-white px-2 mb-5"></label>
                 <label class="text-menu">E-mail<br><input type="email" name="from" placeholder="mariorossi@example.com"
@@ -116,7 +116,7 @@
                 </label>
 
                 <input type="submit" value="Invia" onclick="showHide(); return false;"
-                    class="w-1/4 bg-yellow text-black p-1 font-bold text-menu rounded-xl mt-16 hover:scale-110 hover:duration-150">
+                    class="w-1/4 bg-yellow text-black p-1 font-bold text-menu rounded-xl mt-8 hover:scale-110 hover:duration-150">
 
             </form>
         </div>
@@ -127,10 +127,10 @@
 
     </div>
 
-    <div id="spacer" class="h-32 invisible">.</div>
 
-    <div id="footer" class="w-full h-4 flex justify-end">
-        <p id="copyrights" class="text-gray text-copyrights text-base">©2022 MG-Labs</p>
+
+    <div id="footer" class="w-11/12 h-4 flex justify-end absolute bottom-2">
+        <p id="copyrights" class="text-gray text-copyrights">©2022 MG-Labs</p>
     </div>
 
 
