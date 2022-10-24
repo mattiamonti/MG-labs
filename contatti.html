@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./img/MGlogo-icon.png">
+    <link rel="icon" href="./img/MGlogo.svg">
     <title>MG Labs</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
         integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
@@ -105,18 +105,18 @@
         </div>
 
         <formcontainer class="w-2/3 h-auto mt-16 pl-8">
-            <form action="mailto:mattiamonti2001@gmail.com,danielegnudi99@gmail.com" method="GET"
-                class="w-2/3 text-black" enctype="text/plain">
-                <label class="text-menu">Il tuo nome<br><input type="text" name="subject" placeholder="Mario Rossi"
+            <form action="https://formspree.io/mattiamonti2001@gmail.com" method="POST" class="w-2/3 text-black"
+                enctype="text/plain">
+                <label class="text-menu">Il tuo nome<br><input type="text" name="name" placeholder="Mario Rossi"
                         class="w-full h-9 rounded-md bg-white px-2 mb-5"></label>
-                <label class="text-menu">E-mail<br><input type="email" name="from" placeholder="mariorossi@example.com"
-                        class="w-full h-9 rounded-md bg-white px-2 mb-5"></label>
+                <label class="text-menu">E-mail<br><input type="email" name="_replyto"
+                        placeholder="mariorossi@example.com" class="w-full h-9 rounded-md bg-white px-2 mb-5"></label>
                 <label class="text-menu">Messaggio<br>
-                    <textarea rows=5 name="body" placeholder="Spiegaci il tuo progetto..."
+                    <textarea rows=5 name="_subject" placeholder="Spiegaci il tuo progetto..."
                         class="px-2 rounded-md bg-white w-full h-2/3"></textarea>
                 </label>
 
-                <input type="submit" value="Invia" 
+                <input type="submit" value="Send"
                     class="w-1/4 bg-yellow text-black p-1 font-bold text-menu rounded-xl mt-8 hover:scale-110 hover:duration-150">
 
             </form>
