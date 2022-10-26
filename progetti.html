@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/MGlogo-icon.png">
     <title>Progetti</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
         integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"
+        integrity="sha512-tHvUcUQYi35zApvAa5TNR3fNhBQkVtkmWKfacnpxmix4/VTGz1lGjIVyLMp7gLgAvg+aKJjnVKokXJNS5GZ+/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -16,7 +20,7 @@
 
                 colors: {
                     transparent: 'transparent',
-                    'white': '#f5f5f5',
+                    'white': '#ffffff',
                     'black': '#121212',
                     'yellow': '#FFBD44',
                     'dark-yellow': '#F6AA1D',
@@ -50,23 +54,24 @@
 </head>
 
 
-<body class="ml-16 mr-16 text-sans bg-[url('./img/wallpaper.svg')] bg-no-repeat bg-center overflow-x-hidden">
+<body
+    class="ml-16 mr-16 text-sans bg-[url('./img/wallpaper.svg')] bg-no-repeat bg-center bg-fixed backdrop-blur-sm bg-auto overflow-x-hidden absolute">
 
-    <div id="header" class="w-auto h-16 mt-4 flex justify-between font-bold text-black">
+    <header id="header" class="w-11/12 h-16 top-0 pt-6 flex justify-between font-bold text-black fixed bg-white z-20">
         <div id="logo" class="my-auto">
             <img src="./img/MGlogo.svg" alt="logo" class="w-12 h-12 inline-block">
             <h2 class="inline-block text-menu ml-4">MG labs</h2>
         </div>
 
-        <div id="navbar" class="w-1/5 flex justify-between my-auto">
+        <nav id="navbar" class="w-1/5 flex justify-between my-auto">
             <p class="inline-block text-menu hover:scale-105 hover:duration-150"><a href="index.html">HOME</a></p>
             <p class="inline-block text-dark-yellow text-menu hover:scale-110 hover:duration-150"><a
                     href="contatti.html">CONTATTACI</a>
             </p>
-        </div>
-    </div>
+        </nav>
+    </header>
 
-    <div id="maintext" class="w-5/6 h-auto mt-28 m-auto bg-white p-10 rounded-3xl shadow-black shadow-2xl flex">
+    <article id="project-1" class="w-5/6 h-auto mt-44 m-auto bg-white p-10 rounded-3xl shadow-lg flex">
 
         <div id="img" class="w-1/3 my-auto">
             <img src="./img/VaragoPrev.png" alt="" class="">
@@ -80,12 +85,129 @@
                 Lorem Ipsum Lorem Ipsum
             </p>
         </div>
-    
-    </div>
 
-    <div id="footer" class="w-full h-4 mt-64 flex justify-end">
+    </article>
+
+    <article id="project-2" class="w-5/6 h-auto mt-32 m-auto bg-white p-10 rounded-3xl shadow-lg flex">
+
+        <div id="img" class="w-1/3 my-auto">
+            <img src="./img/VaragoPrev.png" alt="" class="">
+        </div>
+
+        <div id="descrizione" class="w-2/3 pl-10">
+            <h1 class="font-bold text-title-card">Vivi Varago</h1>
+            <p class="text-normal" id="content">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                Lorem
+                Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                Lorem Ipsum Lorem Ipsum
+            </p>
+        </div>
+
+    </article>
+
+    <article id="project-3" class="w-5/6 h-auto mt-32 m-auto bg-white p-10 rounded-3xl shadow-lg flex">
+
+        <div id="img" class="w-1/3 my-auto">
+            <img src="./img/VaragoPrev.png" alt="" class="">
+        </div>
+
+        <div id="descrizione" class="w-2/3 pl-10">
+            <h1 class="font-bold text-title-card">Vivi Varago</h1>
+            <p class="text-normal" id="content">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                Lorem
+                Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                Lorem Ipsum Lorem Ipsum
+            </p>
+        </div>
+
+    </article>
+
+    <footer id="footer" class="w-full h-4 mt-64 flex justify-end">
         <p id="copyrights" class="text-gray text-copyrights text-base">©2022 MG-Labs</p>
-    </div>
+    </footer>
+
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        //creazione timeline gsap per animazioni
+        const tl = gsap.timeline();
+
+        //posizioni per inizio e fine animazione uscita dall alto
+        const start_exit_animation = "top 10%"
+        const end_exit_animation = "bottom 20%"
+        //posizioni per inizio e fine animazione entrata dal basso
+        const start_enter_animation = "top bottom"
+        const end_enter_animation = "bottom 70%"
+
+        const scaled_value = 0.75
+
+        //ANIMAZIONE PROGETTO 1
+        //solo uscita dall alto
+        tl.to("#project-1", {
+            scrollTrigger: {
+                trigger: "#project-1",
+                start: start_exit_animation,
+                end: end_exit_animation,
+                scrub: true,
+                toggleActions: 'play',
+            },
+            scale: scaled_value,
+            immediateRender: false
+        });
+
+        //ANIMAZIONE PROGETTO 2
+        //entrata dal basso
+        tl.from("#project-2", {
+            scrollTrigger: {
+                trigger: "#project-2",
+                start: start_enter_animation,
+                end: end_enter_animation,
+                scrub: true,
+            },
+            scale: scaled_value,
+            immediateRender: false
+        });
+        //uscita dall alto
+        tl.to("#project-2", {
+            scrollTrigger: {
+                trigger: "#project-2",
+                start: start_exit_animation,
+                end: end_exit_animation,
+                scrub: true,
+            },
+            scale: scaled_value,
+            immediateRender: false
+        });
+
+        //ANIMAZIONE PROGETTO 3
+        //entrata dal basso
+        tl.from("#project-3", {
+            scrollTrigger: {
+                trigger: "#project-3",
+                start: start_enter_animation,
+                end: end_enter_animation,
+                scrub: true,
+            },
+            scale: scaled_value,
+            immediateRender: false
+        });
+        //uscita dall alto
+        tl.to("#project-3", {
+            scrollTrigger: {
+                trigger: "#project-3",
+                start: start_exit_animation,
+                end: end_exit_animation,
+                scrub: true,
+            },
+            scale: scaled_value,
+            immediateRender: false
+        });
+
+
+
+
+
+    </script>
 
 </body>
 
