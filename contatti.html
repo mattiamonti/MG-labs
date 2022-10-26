@@ -107,11 +107,11 @@
         <formcontainer class="w-2/3 h-auto mt-16 pl-8">
             <form action="https://formspree.io/f/xaykpbqq" method="POST" class="w-2/3 text-black" enctype="text/plain">
 
-                <label class="text-menu">Il tuo nome<br><input type="text" name="name" placeholder="Mario Rossi" class="w-full h-9 rounded-md bg-white px-2 mb-5"></label>
-                <label class="text-menu">E-mail<br><input type="email" name="email" placeholder="mariorossi@example.com" class="w-full h-9 rounded-md bg-white px-2 mb-5"></label>
+                <label class="text-menu">Il tuo nome<br><input type="text" name="name" placeholder="Mario Rossi" class="w-full h-9 rounded-md bg-white px-2 mb-5" required></label>
+                <label class="text-menu">E-mail<br><input type="email" name="email" placeholder="mariorossi@example.com" class="w-full h-9 rounded-md bg-white px-2 mb-5" required></label>
                 <label class="text-menu">Messaggio<br>
-                    <textarea rows=5 name="_subject" placeholder="Spiegaci il tuo progetto..."
-                        class="px-2 rounded-md bg-white w-full h-2/3"></textarea>
+                    <textarea rows=5 name="message" placeholder="Spiegaci il tuo progetto..."
+                        class="px-2 rounded-md bg-white w-full h-2/3" required></textarea>
                 </label>
 
                 <input type="submit" value="Send"

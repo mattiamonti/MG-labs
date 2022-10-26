@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./img/MGlogo-icon.png">
     <title>MG Labs</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+        integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -19,7 +21,7 @@
                     'black': '#121212',
                     'yellow': '#FFBD44',
                     'dark-yellow': '#F6AA1D',
-                    'gray':'#B6B6B6',
+                    'gray': '#B6B6B6',
                 },
 
                 fontFamily: {
@@ -91,7 +93,8 @@
         </div>
 
         <div id="navbar" class="w-1/5 flex justify-between my-auto">
-            <p class="inline-block text-menu hover:scale-105 hover:duration-150"><a href="progetti.html">PROGETTI</a></p>
+            <p class="inline-block text-menu hover:scale-105 hover:duration-150"><a href="progetti.html">PROGETTI</a>
+            </p>
             <p class="inline-block text-dark-yellow text-menu hover:scale-110 hover:duration-150"><a
                     href="contatti.html">CONTATTACI</a>
             </p>
@@ -100,17 +103,22 @@
 
     <div id="maincontent" class="flex justify-between text-black">
         <div id="maintext" class="w-1/2 h-auto mt-28">
-            <h1 class="text-title font-bold" id="title">Ciao! <span id="emoji" class="inline-block animate-wave">👋🏻</span></h1>
-            <p class="text-normal" id="content">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
+            <h1 class="text-title font-bold" id="title">Ciao! <span id="emoji"
+                    class="inline-block animate-wave">👋🏻</span></h1>
+            <p class="text-normal" id="content">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                Lorem
                 Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
                 Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
                 Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
             </p>
 
             <div class="mt-20 flex" id="buttons">
-                <button id="contattaci" class="p-1 px-2 bg-yellow text-normal font-bold rounded-lg inline-block hover:scale-110 hover:duration-150">
-                    Contattaci
-                </button>
+                <a href="contatti.html">
+                    <button id="contattaci"
+                        class="p-1 px-2 bg-yellow text-normal font-bold rounded-lg inline-block hover:scale-110 hover:duration-150">
+                        Contattaci
+                    </button>
+                </a>
 
                 <a href="https://github.com/Gnooodles" target="_blank" class="hover:scale-110 hover:duration-150">
                     <div class="ml-16 my-auto">
@@ -138,12 +146,12 @@
     </div>
 
     <script>
-        gsap.from("#header", {y:-100, duration: 1})
-        gsap.from("#title", {x:-500, opacity: 0, duration: 1})
-        gsap.from("#content", {x:-500, opacity: 0, duration: 1, delay: 0.5})
-        gsap.from("#illustration", {x: 1000, opacity: 0, duration: 1, delay: 0.2})
-        gsap.from("#buttons", {y:100, opacity:0 , duration: 0.7, delay: 1})
-        gsap.from("#copyrights", {opacity: 0, duration: 1.5, delay: 1})
+        gsap.from("#header", { y: -100, duration: 1 })
+        gsap.from("#title", { x: -500, opacity: 0, duration: 1 })
+        gsap.from("#content", { x: -500, opacity: 0, duration: 1, delay: 0.5 })
+        gsap.from("#illustration", { x: 1000, opacity: 0, duration: 1, delay: 0.2 })
+        gsap.from("#buttons", { y: 100, opacity: 0, duration: 0.7, delay: 1 })
+        gsap.from("#copyrights", { opacity: 0, duration: 1.5, delay: 1 })
 
 
 
