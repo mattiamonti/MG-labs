@@ -86,7 +86,7 @@
 
 <body class="ml-16 mr-16 text-sans bg-white max-w-full overflow-x-hidden max-h-full overflow-y-hidden">
 
-    <nav id="header" class="w-auto h-16 mt-4 flex justify-between font-bold text-black">
+    <div id="header" class="w-auto h-16 mt-4 flex justify-between font-bold text-black">
         <div id="logo" class="my-auto">
             <img src="./img/MGlogo.svg" alt="logo" class="w-12 h-12 inline-block">
             <h2 class="inline-block text-menu ml-4">MG labs</h2>
@@ -97,15 +97,15 @@
             <p class="inline-block text-menu hover:scale-110 hover:duration-150"><a href="progetti.html">PROGETTI</a>
             </p>
         </div>
-    </nav>
+    </div>
 
-    <main id="maincontent" class="flex justify-between text-black w-full h-auto mt-8">
-        <div id="form" class="w-2/3 h-auto absolute -z-20">
+    <div id="maincontent" class="flex justify-between text-black w-full h-auto mt-8">
+        <div id="form-image" class="w-2/3 h-auto absolute -z-20">
             <img src="./img/form.svg" alt="Form" class="-z-10 w-5/6 h-auto">
 
         </div>
 
-        <formcontainer class="w-2/3 h-auto mt-16 pl-8">
+        <div id="formcontainer" class="w-2/3 h-auto mt-16 pl-8">
             <form action="https://formspree.io/f/xaykpbqq" method="POST" class="w-2/3 text-black">
 
                 <label class="text-menu">Il tuo nome<br><input type="text" name="name" placeholder="Mario Rossi"
@@ -120,21 +120,28 @@
                     class="w-1/4 bg-yellow text-black p-1 font-bold text-menu rounded-xl mt-8 hover:scale-110 hover:duration-150">
 
             </form>
-        </formcontainer>
+        </div>
 
-        <illustration id="illustrationwrapper" class="w-1/3 mt-16">
+        <div id="sended-alert" class="w-1/3 mt-16">
             <img src="./img/sended-alert.svg" id="message" alt="Sended alert" class="h-full my-auto -ml-8">
-        </illustration>
+        </div>
 
-    </main>
+    </div>
 
 
 
-    <footer id="footer" class="w-11/12 h-4 flex justify-end absolute bottom-2">
+    <div id="footer" class="w-11/12 h-4 flex justify-end absolute bottom-2">
         <p id="copyrights" class="text-gray text-copyrights">©2022 MG-Labs</p>
-    </footer>
+    </div>
 
-
+    <script>
+        //ANIMAZIONI DI CARICAMENTO
+        gsap.from("#header", { y: -100, duration: 1 });
+        gsap.from("#formcontainer", { x: -1000, opacity: 0,duration: 1 });
+        gsap.from("#form-image", { x: -1000, opacity:0, duration: 1 });
+        gsap.from("#copyrights", { opacity: 0, duration: 1.5, delay: 1 });
+        gsap.from("#sended-alert", { x: 3000, opacity: 0, duration: 1, delay: 2 });
+    </script>
 
 </body>
 
